@@ -1,0 +1,277 @@
+.img-header{
+    position: relative;
+
+    
+}
+
+.area-contacts{
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    background: #4F202A;
+    color: white;
+    font-weight: bold;
+    position: flex;
+    padding: 6px;
+    margin-bottom: 5;
+
+    i{
+        margin-left: 5px;
+    }
+
+    a{
+        color: white;
+        transition: 1s;
+        margin-left: 3px;
+
+        i{
+            transition: 1s;
+            &:hover{
+                color: #DC3545
+                
+            }
+           
+        }
+      
+
+        btn{
+            color: white;
+        }
+    }
+}
+
+img{
+    height: 100%;
+
+    width: 100%;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .area-contacts{
+        height: 100px;
+        transition: 1s;
+        text-align: center;
+    }
+
+
+  }
+
+
+
+
+
+  @media only screen and (max-width: 530px) {
+    .area-contacts{
+        height: 100px;
+        transition: 1s;
+        text-align: center;
+    }
+   
+  }
+
+.container-data{
+    background: url("../../../assets/images/bg-header.jpg");
+    height: 880px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    h1{
+        font-size: 56px;
+        font-weight: 700;
+        font-family: Oxygen;
+    }
+}
+
+
+nav{
+
+
+    &:-webkit-scrollbar{
+        a{
+            color: black;
+            font-weight: bold;
+    
+            &:hover{
+                color: #E0A965;
+                transition: 2s;
+    
+            }
+        }     
+    }
+   
+    a{
+        color: black;
+        font-weight: bold;
+       
+        &:hover{
+            color: #E0A965;
+            transition: 2s;
+        
+
+
+        }
+    }
+}
+
+
+.nav-item{
+    background-color: E0A965;
+}
+
+nav{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    
+    transition-duration: 0.5s;
+    height: 100px;
+    
+
+    ul{
+        margin-right: 100px;
+    }
+    
+
+
+
+    .nav-item a:hover{
+        transition: 1s;
+        background-color: rgb(184, 155, 94);;
+        border-radius: 15px;
+        color: white
+    }
+
+    .nav-item a:active{
+        transition: 1s;
+        background-color: rgb(184, 155, 94);;
+        border-radius: 15px;
+        color: white
+    }
+
+
+}
+.welcome{
+    color: white;
+   
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 14%;
+    position: absolute;
+
+
+  
+
+
+}
+
+.bg-img-2{
+    height: 100px;
+    width: 50px;
+
+}
+.btn-default-screen{
+    background-color: #DFA865;
+    border-radius: 3px;
+    color: white;
+    font-family: Oxygen;
+    border-color: #DFA865;
+    width: 207px;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: #302E2F;
+        transition-duration: 1s;
+        border-color: #302E2f;
+    }
+}
+.content-wraper{
+    background: black;
+    position: absolute;
+}
+
+.title-card{
+    color: black;
+    font-weight: 300;
+    
+    font-family: Oxygen;
+    font-size: 34px;
+
+    p{
+        font-weight: 100;
+        font-size: 14px;
+    }
+}
+.areas-atuacao{
+    height: 100%;
+    
+    .card{
+        align-items: center;
+        text-align: center;
+        height: 300px;
+        background: white;
+        box-shadow: silver 3px 3px;
+        transition: 1s;
+      
+        &:hover{
+           // border: black solid 2px;
+            border: 1px solid rgb(79, 32, 42);;
+            border-width: 6px;
+            animation: 2s;
+
+        }
+        
+    }
+    .bg-img{
+        background: white;
+        
+        height: 70px;
+        width: 70px;
+    
+    }
+    
+}
+
+.sobre{
+    height: 500px;
+    padding: 15px;
+    background: url("./../../../assets/images/bg-adv-5.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  i{
+      margin-left: 5px;
+  }
+
+    img{
+        height: 300px;
+        width: 300px;
+    }
+
+    h2{
+        
+
+        font-family: "Playfair Display", serif;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #002c42;
+    }
+
+    p{
+        font-size: 17.6px;
+        text-align: left;
+        padding: 10px;
+        color: rgb(136, 134, 134);
+    }
+
+    a{
+        color: #4F202A;
+
+        &:hover{
+            color: rgb(37, 37, 141);
+            transition: 1s;
+
+        }
+
+        
+    }
+}
