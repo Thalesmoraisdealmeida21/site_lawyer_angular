@@ -1,0 +1,44 @@
+<app-template-content [titlePage]="'Públicações'">
+    
+   <div class="contentPage">
+    <div class="contianer-fluid">
+      <div class="row">
+    
+
+    
+    
+    
+    
+    
+        <div *ngFor="let post of posts" class="col-md-4 col-xs-12">
+            
+          <div class="card">
+          
+            <div class="thumb">
+              <img class="rounded " src="{{post.imgCapa}}" alt="">
+            
+            </div>
+                
+    
+                <div class="card-body">
+                 
+                 <a routerLink="{{post.id}}"><h1>{{post.titulo}}</h1></a>
+                  
+                  
+                   <div class="descrptionResumida" innerHTML="{{post.descResum}}..."></div>
+                
+                </div>
+          </div>
+    
+    
+        </div>
+    
+      </div>
+     </div>
+   </div>
+
+ 
+     
+
+
+</app-template-content>

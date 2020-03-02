@@ -79,8 +79,8 @@ img{
 
 
 .container-data{
-    background: url("../../../assets/images/bg-header.jpg");
-    height: 880px;
+    background: rgb(233, 233, 233);
+    height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     h1{
@@ -287,32 +287,5 @@ nav{
         }
 
         
-    }
-}
-
-
-
-
-.showMenuMobile{
-
-    @media only screen and (max-width: 990px) {
-        background: #F8F9FA;
-        width: 100%;
-        padding: 50px;
-        visibility: visible;
-        &:enabled{
-            transition: 2s;
-        }
-    }
-
-}
-
-
-.hideMenuMobile{
-    @media only screen and (max-width: 990px) {
-       visibility: hidden;
-       display: none;
-       height: 0px;
-       transition-duration: 2s;
     }
 }

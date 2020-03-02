@@ -1,4 +1,5 @@
 
+
 <div class="area-contacts">
     <div class="container">
       <div class="row">
@@ -62,29 +63,33 @@
   </div>
 
   
-  <nav [ngClass]="showNavScroll" class="navbar navbar-expand-lg navbar-light bg-light fixed-top mt-{{mtop}}">
+  <nav [ngClass]="showNavScroll" class="navbar navbar-collapse navbar-expand-lg navbar-light bg-light fixed-top {{mtop}} margo">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="../../../assets/images/logo-foda.png" alt="">
 
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" (click)="showMenuMobile()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <div class="{{collapseMenuMobile}} navbar-collapse" id="navbarSupportedContent">
   
     <ul class="nav navbar-nav ml-auto ">
       <li class="nav-item">
         <a class="nav-link active" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Áreas de Atuação</a>
+        <a routerLink="areas-atuacao" class="nav-link" href="#">Áreas de Atuação</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Contato</a>
+        <a routerLink="blog" class="nav-link" href="#">Blog</a>
       </li>
+      <li class="nav-item">
+        <a routerLink="contato" class="nav-link" href="#">Contato</a>
+      </li>
+  
   
     </ul>
     </div>
@@ -186,8 +191,12 @@
       
     </div>
 
+
+    <ng-content>
+  
+    </ng-content>
   </div>  
 
 
 
-
+  

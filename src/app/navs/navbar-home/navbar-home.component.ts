@@ -9,21 +9,45 @@ import { Scroll } from '@angular/router';
 export class NavbarHomeComponent implements OnInit {
 
   showNavScroll
-  mtop = "5";
+  mtop = "mt-5";
+  collapseMenuMobile = "hideMenuMobile"
+
   constructor() { }
   @HostListener("window:scroll", ['$event'])
 
+
+
   onWindowScroll(event) {
+    
     if(event.path[1].scrollY == 0){
       
       this.showNavScroll = "bg-light"
-      this.mtop = "5"
+      this.mtop = "mt-5"
+  
+    
     }else {
       this.showNavScroll = "bg-light"
-      this.mtop = "0"
+      this.mtop = "mt-0"
     }
-  
+
+
+ 
   }
+
+
+  showMenuMobile(){
+    if(this.collapseMenuMobile == "hideMenuMobile"){
+      this.collapseMenuMobile = "showMenuMobile"
+    } else {
+      if(this.collapseMenuMobile ="showMenuMobile"){
+        this.collapseMenuMobile = "hideMenuMobile"
+      }
+    }
+
+    console.log("collapsou")
+
+  }
+
   ngOnInit(): void {
 
   }
