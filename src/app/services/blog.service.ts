@@ -11,8 +11,8 @@ export class BlogService {
   constructor(private http: HttpClient) { }
 
 
-  getAllPosts(){
-      const url = environment.api + "/posts"
+  getAllPosts(page){
+      const url = environment.api + "/posts/" + page
       return this.http.get(url)
   }
 
@@ -20,6 +20,12 @@ export class BlogService {
   getOnePost(id){
     const url = environment.api + "/post/" + id
 
+    return this.http.get(url);
+  }
+
+
+  countPosts(){
+    const url = environment.api + "/posts/count"
     return this.http.get(url);
   }
 }

@@ -5,5 +5,6 @@ export interface Post {
     createdAt: Date,
     updatedAt: Date,
     imgCapa: string,
-    descResum: string
+    descResum: string,
+    count: number
 }

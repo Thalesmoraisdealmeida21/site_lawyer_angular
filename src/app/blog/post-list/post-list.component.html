@@ -1,4 +1,4 @@
-<app-template-content [titlePage]="'Públicações'">
+<app-template-content class="container-master" [titlePage]="'Blog'">
     
    <div class="contentPage">
     <div class="contianer-fluid">
@@ -6,13 +6,18 @@
     
 
     
-    
-    
-    
+    <div *ngIf="showLoader" class="loader">
+      <mat-spinner></mat-spinner>
+      <label for="">Carregando</label>
+    </div>
+
+
+       
+        
     
         <div *ngFor="let post of posts" class="col-md-4 col-xs-12">
-            
-          <div class="card">
+        
+          <div *ngIf="!showLoader"class="card">
           
             <div class="thumb">
               <img class="rounded " src="{{post.imgCapa}}" alt="">
@@ -22,23 +27,42 @@
     
                 <div class="card-body">
                  
-                 <a routerLink="{{post.id}}"><h1>{{post.titulo}}</h1></a>
+                 <a routerLink="../../{{post.id}}"><h1>{{post.titulo}}</h1></a>
                   
                   
                    <div class="descrptionResumida" innerHTML="{{post.descResum}}..."></div>
+
+                   <button routerLink="../../{{post.id}}" class="btn-see-more" mat-raised-button color="warn">Continue Lendo</button>
                 
                 </div>
           </div>
     
     
         </div>
-    
+        <div class="col-md-9"></div>
+   
+
+        
       </div>
      </div>
    </div>
 
+
+   <div class="col-md-3 navbar-pagination">
+    
+           <nav aria-label="..." class="">
+             <ul class="pagination pagination-lg">
+               <li *ngFor="let page of pages; index as i" class="page-item">
+                 <a routerLink="/blog/page/{{i+1}}"class="page-link selected" href="#" tabindex="-1">{{i + 1}}</a>
+               </li>
+               
+             </ul>
+           </nav>
+    
+       </div>
+
  
-     
+    
 
 
 </app-template-content>

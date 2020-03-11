@@ -5,7 +5,36 @@ img{
  
 }
 
+.container-master{
+    height: 800px   ;
+}
+.selected{
+    background-color: #4F202A;
+    color: white;
+}
 
+label{
+    margin-left: 10px;
+}
+.navbar-pagination{
+   
+
+ 
+
+    .page-link{
+      
+        &:disabled{
+            background-color: brown;
+        }
+            
+        
+    }
+
+}
+
+.loading{
+    height: 100px;
+    width: 50px;}
 
     p{
         max-width: 1ch;
@@ -28,6 +57,10 @@ h1{
     font-family: "Oxygen";
 }
 
+.mat-spinner{
+    color: brown;
+}
+
 p{
     padding: 10px;
 }
@@ -35,8 +68,18 @@ p{
 
 .contentPage{
     padding: 20px;
+    height: 550px;
 }
 
+
+.btn-see-more{
+    background-color: brown;
+
+    &:hover{
+        background-color: rgb(59, 19, 19);
+        transition: 2s;
+    }
+}
 a{
     color: black;
     text-decoration: none;
@@ -49,6 +92,12 @@ a{
         }
         
     }
+}
+
+.loader{
+    margin-top: 10px;
+    margin-left: 45%;
+    margin-right: 45%;
 }
 
 

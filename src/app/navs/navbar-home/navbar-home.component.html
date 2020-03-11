@@ -81,13 +81,13 @@
         <a class="nav-link active" href="#">Home</a>
       </li>
       <li class="nav-item">
-        <a routerLink="areas-atuacao" class="nav-link" href="#">Áreas de Atuação</a>
+        <a [routerLink]="['/areas-atuacao']" class="nav-link" href="#">Áreas de Atuação</a>
       </li>
       <li class="nav-item">
-        <a routerLink="blog" class="nav-link" href="#">Blog</a>
+        <a [routerLink]="['/../../../blog/page/1']" class="nav-link" href="#">Blog</a>
       </li>
       <li class="nav-item">
-        <a routerLink="contato" class="nav-link" href="#">Contato</a>
+        <a [routerLink]="['/contato']" class="nav-link" href="#">Contato</a>
       </li>
   
   
@@ -161,11 +161,13 @@
     </div>
   </div>
 
+
   <div class="sobre mt-5">
     <div class="container">
       <div class="row">
       <div class="col-md-4">
         <img src="./../../../assets/images/adv-person.png" alt="" class="img-thumnail">
+        
       </div>
       <div class="col-md-7">
         <h2>Lutamos pela justiça, estamos sempre prontos para a melhor solução para o seu problema</h2>
@@ -195,8 +197,8 @@
     <ng-content>
   
     </ng-content>
+    <app-footer></app-footer>
   </div>  
 
 
 
-  

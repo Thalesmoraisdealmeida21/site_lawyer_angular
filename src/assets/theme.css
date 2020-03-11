@@ -1,0 +1,15 @@
+.mat-form-field.mat-focused .mat-form-field-ripple{
+    background-color: brown;
+}
+
+
+.mat-form-field.mat-focused .mat-form-field-label{
+    color: brown;
+}
+
+
+.mat-progress-spinner circle, .mat-spinner circle{
+
+    stroke: white;
+
+}

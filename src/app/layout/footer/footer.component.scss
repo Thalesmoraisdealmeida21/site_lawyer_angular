@@ -1,8 +1,19 @@
+.card{
+    background-color: transparent;
+}
+.contat-area{
+    color: white ;
+}
 .footer-body{
     height: 400px;
+    
     text-align: center;
     background: #4F202A;
     color: white;
+
+    @media only screen and (max-width: 900px){
+        height: 900px;
+    }
     h4{
         font-weight: bold;
         font-family: "Playfair Display";
@@ -10,20 +21,37 @@
         text-align: center;
     }
 
+    .btn-custom{
+        margin-top: 180px;
+        background-color: brown;
+        color: white;
+    }
+
     li{
+
+        h1{
+            align-items: center;
+            margin-left: 10px;
+        }
         
         list-style-type: none;
         text-align: center;
-        &:hover{
-            border-bottom: red solid 1px;
-            transition: 2s;     
-        }
+       
         a{
             text-decoration: none;
             color: white;
-
-    
         }
+    }
+}
+
+
+.formcontato{
+    height: 300px;
+}
+.link-custom{
+   
+    h1{
+        margin-left: 60px;
     }
 }
 
@@ -36,6 +64,9 @@
 
 }
 
+
+
 i{
-    margin: 3px;
+    margin: 5px;
+
 }

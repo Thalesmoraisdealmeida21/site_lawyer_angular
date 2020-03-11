@@ -6,7 +6,7 @@
 
 .area-contacts{
     width: 100%;
-    height: 100%;
+    height: 80px;
     position: inherit;
     background: #4F202A;
     color: white;
@@ -44,6 +44,7 @@ img{
     height: 100%;
 
     width: 100%;
+    margin-bottom: 10px;
 }
 
 
@@ -80,6 +81,9 @@ img{
 
 .container-data{
     background: url("../../../assets/images/bg-header.jpg");
+    @media only screen and (max-width: 990px) {
+        height: 600px;
+    }
     height: 880px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -172,6 +176,18 @@ nav{
     margin-top: 14%;
     position: absolute;
 
+    @media only screen and (max-width: 990px)  {
+        margin-top: 35%;
+        margin-left: 0px;
+        margin-right: 20px;
+        width: 100%;
+
+        text-align: center;
+        h1{
+            font-size: 35px;
+        }
+    }
+
 
   
 
@@ -191,6 +207,7 @@ nav{
     border-color: #DFA865;
     width: 207px;
     text-transform: uppercase;
+    
 
     &:hover{
         background-color: #302E2F;
@@ -206,7 +223,7 @@ nav{
 .title-card{
     color: black;
     font-weight: 300;
-    
+    margin-top: 10px;
     font-family: Oxygen;
     font-size: 34px;
 
@@ -216,7 +233,7 @@ nav{
     }
 }
 .areas-atuacao{
-    height: 100%;
+  
     
     .card{
         align-items: center;
@@ -246,11 +263,18 @@ nav{
 }
 
 .sobre{
-    height: 500px;
+
     padding: 15px;
     background: url("./../../../assets/images/bg-adv-5.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media only screen and (max-width: 900px){
+       img{
+           display: none;
+       }
+    }
+
 
   i{
       margin-left: 5px;

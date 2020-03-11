@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
 import { Post } from 'src/app/interfaces/post';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-post-list',
@@ -8,32 +9,77 @@ import { Post } from 'src/app/interfaces/post';
   styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent implements OnInit {
-
-  constructor(private BlogService: BlogService) { }
-
   posts: Post[];
+  AllPosts: Post[];
+  pages: number[] = [];
+  showLoader: boolean = true;
 
-  ngOnInit(): void {
-    this.getAllPost();
-    this.resumeDescricao();
+  constructor(private BlogService: BlogService, private ActivatedRoute: ActivatedRoute) { 
+    this.ActivatedRoute.params.subscribe((params)=>{
+      console.log(params['page'])
+      this.getAllPost(params['page'])
+    })
+
   }
 
-  getAllPost(){
-    this.BlogService.getAllPosts().subscribe((posts: Post[])=>{
+
+  
+
+
+
+  ngOnInit(): void {
+  
+
+    this.countPosts();
+    
+
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event) {
+    
+ }
+
+
+
+
+  getAllPost(page){
+    this.showLoader = true
+    this.BlogService.getAllPosts(page).subscribe((posts: Post[])=>{
       this.posts = posts
+      if(posts){
+        this.showLoader = false
+      }
       this.posts.forEach(function(post: Post){
       
 
-      post.descResum = post.descricao.toString().substring(0, 200)
-        console.log(post.descResum);
+      post.descResum = post.descricao.toString().substring(0, 100)
+      
     
       })
     })
   }
 
 
-  resumeDescricao(){
+  countPosts(){
+
+    this.BlogService.countPosts().subscribe((postsCounteds: Post)=>{
     
+  
+        let numberPages = postsCounteds.count / 3;
+       
+       
+        for(let i =1;i < numberPages + 1; i++){
+          this.pages.push(i)
+
+    
+        }
+
+        console.log(this.pages);
+
+    })
   }
+
+
 
 }

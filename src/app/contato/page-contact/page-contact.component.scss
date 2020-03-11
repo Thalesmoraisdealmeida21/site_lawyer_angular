@@ -1,0 +1,37 @@
+.container{
+    padding: 20px;
+
+}
+
+.icons-contacts{
+    margin: 10px;
+}
+
+a{
+    height: 35px;
+    align-items: center;
+
+}
+
+i{
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+
+.social-medias{
+    margin: 10px;
+
+
+    i{
+        margin: 2px;
+
+        &:hover{
+            color: brown;
+            transition: 2s;
+        }
+    }
+
+
+
+}
