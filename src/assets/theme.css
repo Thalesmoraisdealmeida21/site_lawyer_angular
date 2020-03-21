@@ -13,3 +13,7 @@
     stroke: white;
 
 }
+
+.image img{
+    max-width: 100%;
+}

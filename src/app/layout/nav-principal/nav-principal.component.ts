@@ -9,6 +9,7 @@ export class NavPrincipalComponent implements OnInit {
 
   showNavScroll
   mtop = "mt-5";
+  collapseMenuMobile = "hideMenuMobile"
 
   @HostListener("window:scroll", ['$event'])
 
@@ -35,4 +36,17 @@ export class NavPrincipalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  showMenuMobile(){
+    if(this.collapseMenuMobile == "hideMenuMobile"){
+      this.collapseMenuMobile = "showMenuMobile"
+    } else {
+      if(this.collapseMenuMobile ="showMenuMobile"){
+        this.collapseMenuMobile = "hideMenuMobile"
+      }
+    }
+
+    console.log("collapsou")
+
+  }
 }

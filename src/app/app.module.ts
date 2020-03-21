@@ -24,6 +24,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { PageContactComponent } from './contato/page-contact/page-contact.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AreaAtuacaoViewComponent } from './areas-atuacao/area-atuacao-view/area-atuacao-view.component';
+import { FormsModule }   from '@angular/forms';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { AreaAtuacaoViewComponent } from './areas-atuacao/area-atuacao-view/area
     MatSliderModule,
     MatInputModule,
     MatButtonModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    FormsModule
   ],
   exports: [
     MatFormField

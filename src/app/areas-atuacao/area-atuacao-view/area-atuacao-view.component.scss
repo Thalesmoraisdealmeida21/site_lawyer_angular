@@ -1,9 +1,81 @@
 img{
-    margin-left: 45%;
-    margin-right: 25%;
+    margin: auto;
+    margin-left: 450px;
+    height: 200px;
+    width:  200px;
+}
+
+@media only screen and (max-width: 1200px){
+
+    img{
+        height: 150px;
+        width:  150px;
+
+        margin-left: 400px;
+    }
+}
+
+@media only screen and (max-width: 999px){
+
+    img{
+        height: 150px;
+        width:  150px;
+
+        margin-left: 380px;
+    }
+}
+
+@media only screen and (max-width: 992px){
+
+    img{
+        height: 150px;
+        width:  150px;
+
+        margin-left: 270px;
+    }
+}
+
+@media only screen and (max-width: 770px){
+
+    img{
+        height: 150px;
+        width:  150px;
+
+        margin-left: 180px;
+    }
 }
 
 
 p{
     text-align: center;
+}
+
+.contacts{
+    width: 100%;
+}
+
+.btn-wp{
+    margin-bottom: 20px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 454px){
+
+    img{
+        height: 100px;
+        width:  100px;
+
+        margin-left: 160px;
+    }
+}
+
+@media only screen and (max-width: 370px){
+
+    img{
+        height: 100px;
+        width:  100px;
+
+        margin-left: 120px;
+    }
 }

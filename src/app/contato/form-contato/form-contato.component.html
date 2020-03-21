@@ -15,31 +15,31 @@
 
                         <mat-form-field color="brown" class="form-custom">
                             <mat-label>Nome/Razão Social </mat-label>
-                            <input matInput placeholder="Digite seu nome ou a Razão Social da sua empresa">
+                            <input [(ngModel)]="contactPage.nome" name="nome" matInput placeholder="Digite seu nome ou a Razão Social da sua empresa">
                           </mat-form-field>
 
                         <mat-form-field>
                           <mat-label>E-mail </mat-label>
-                          <input type="email" matInput color="black" automComplete="false" placeholder="Ex. seunome@mail.com">
+                          <input  [(ngModel)]="contactPage.email"  name="email"type="email" matInput color="black" automComplete="false" placeholder="Ex. seunome@mail.com">
                         </mat-form-field>
                         
                         <mat-form-field>
                           <mat-label>Assunto </mat-label>
-                          <input matInput placeholder="Qual assunto da seu problema ?">
+                          <input [(ngModel)]="contactPage.assunto"  name="assunto" matInput placeholder="Qual assunto da seu problema ?">
                         </mat-form-field>
 
                         <mat-form-field class="example-full-width">
                             <mat-label>Telefone</mat-label>
                             <span matPrefix>+55 &nbsp;</span>
-                            <input type="tel" automComplete="false"  matInput placeholder="Ex. 55 1233 4455">
+                            <input [(ngModel)]="contactPage.telefone" name="telefone" automComplete="false"  matInput placeholder="Insira seu telefone com o DDD">
                         </mat-form-field>
 
                         <mat-form-field>
                           <mat-label>Mensagem </mat-label>
-                          <textarea  rows="5" matInput placeholder="Nos diga o que vocẽ precisa que entraremos em contato"></textarea>
+                          <textarea [(ngModel)]="contactPage.mensagem" rows="5" matInput placeholder="Nos diga o que vocẽ precisa que entraremos em contato"></textarea>
                         </mat-form-field>
 
-                        <button class="btn-custom" mat-raised-button >Enviar</button>
+                        <button (click)="sendContato()" class="btn-custom" mat-raised-button>Enviar</button>
                     
                     
                

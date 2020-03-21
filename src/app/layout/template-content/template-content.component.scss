@@ -14,7 +14,27 @@
 
 .title{
    
-   font-weight: 400;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: normal; 
+    font-weight: bold;
+
+    @media only screen and (max-width: 990px) {
+
+          font-weight: 400;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: normal;
+    }
+
+    @media only screen and (max-width: 990px) {
+
+        font-weight: 400;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: normal;
+
+  }
 }
 
 
@@ -23,13 +43,22 @@
     
 }
 
-img{
-    
-    height: 400px;
-    width: 400px;
+p{
+    img{
+        max-height: 400px;
+       max-width: 400px;
+    }
 }
+
 
 .pageHeader{
     margin-top: 100px;
 
+}
+
+@media only screen and (max-width: 450px){
+
+    .title{
+        font-size: 35px;
+    }
 }
